@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static bool VerificarOrdemCrescente(int[] vetor)
+    {
+        for (int i = 0; i < vetor.Length - 1; i++)
+        {
+            if (vetor[i] > vetor[i + 1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    static void Main(string[] args)
+    {
+        int[] array = { 1, 2, 3, 4, 5 };
+
+        if (VerificarOrdemCrescente(array))
+        {
+            Console.WriteLine("Os elementos do array estão em ordem crescente.");
+        }
+        else
+        {
+            Console.WriteLine("Os elementos do array NÃO estão em ordem crescente.");
+        }
+    }
+}
